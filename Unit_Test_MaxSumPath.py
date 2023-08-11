@@ -1,6 +1,6 @@
 import unittest
 
-from MaxSumPath import (
+from MaxPathSumPart2 import (
     max_path_sum,
     read_file_triangle
 )
