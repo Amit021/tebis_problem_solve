@@ -5,7 +5,6 @@ from MaxPathSumPart2 import (
     read_file_triangle
 )
 
-
 class TestMaxPathSum(unittest.TestCase):
     def test_max_path_sum(self):
         triangle1 = read_file_triangle('unitTest1.txt')

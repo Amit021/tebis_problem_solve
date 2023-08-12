@@ -1,5 +1,4 @@
 import os
-triangle_name = 'triangle.txt'
 
 def read_file_triangle(triangle_name):
     __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
@@ -14,18 +13,14 @@ def read_file_triangle(triangle_name):
             Triangle.append(numbers)
     return Triangle
         
-
-
 def max_path_sum(triangle):
     for row in range(len(triangle) - 2, -1, -1):
         for column in range(row + 1):
             triangle[row][column]  += max(triangle[row + 1][column], triangle[row + 1][column + 1])
     return triangle[0][0]
 
-
-Triangle = read_file_triangle(triangle_name)
+Triangle = read_file_triangle('triangle.txt')
 result = max_path_sum(Triangle)
-
 print(result)
 
 
